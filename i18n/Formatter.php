@@ -6,7 +6,7 @@
  * Time: 11:00
  */
 
-namespace uniqby\phoneFormatter\i18n;
+namespace ivan_cc\phoneFormatter\i18n;
 
 use libphonenumber\NumberParseException;
 use libphonenumber\PhoneNumberFormat;
@@ -16,7 +16,26 @@ use libphonenumber\PhoneNumberUtil;
  * @inheritdoc
  */
 class Formatter extends \yii\i18n\Formatter
-{
+{    
+    /**
+     * Converts phone to national format
+     *
+     * @param string $phone
+     * @param $defaultRegionAlpha2
+     * @return String
+     */
+    public static function asPhoneNational($phone, $defaultRegionAlpha2)
+    {
+        $phoneUtil = PhoneNumberUtil::getInstance();
+
+        try {
+            $phoneNumber = $phoneUtil->parseAndKeepRawInput($phone, $defaultRegionAlpha2);
+            return $phoneUtil->format($phoneNumber, PhoneNumberFormat::NATIONAL);
+        } catch (NumberParseException $e) {
+            return $phone;
+        }
+    }    
+    
     /**
      * Converts phone to E164 format
      *
