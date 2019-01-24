@@ -7,7 +7,7 @@
  *
  *
  */
-namespace uniqby\phoneFormatter\behaviors;
+namespace ivan_cc\phoneFormatter\behaviors;
 
 use yii\base\Behavior;
 use yii\db\ActiveRecord;
