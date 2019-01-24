@@ -6,7 +6,7 @@
  * Time: 11:00
  */
 
-namespace uniqby\phoneFormatter\i18n;
+namespace ivan_cc\phoneFormatter\i18n;
 
 use libphonenumber\NumberParseException;
 use libphonenumber\PhoneNumberFormat;
