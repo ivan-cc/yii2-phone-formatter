@@ -1,5 +1,5 @@
 {
-  "name": "uniqby/yii2-phone-formatter",
+  "name": "ivan-cc/yii2-phone-formatter",
   "description": "Phone numbers formatter and behavior for Yii2 Framework",
   "minimum-stability": "dev",
   "license": "MIT",
@@ -16,7 +16,7 @@
   },
   "autoload": {
     "psr-4": {
-      "uniqby\\phoneFormatter\\": ""
+      "ivan_cc\\phoneFormatter\\": ""
     }
   }
 }
